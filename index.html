@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/Decrypt Screen</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Encrypt / Decrypt Text <a href=""><button class="clearBtn">Clear All</button></a></h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Encrypt</h3>
+                <textarea id="encryptText" placeholder="Enter text to encrypt..."></textarea>
+                <button onclick="encryptText()">Encrypt</button>
+                <div class="result" id="encryptResult"></div>
+                <button class="copy-button" onclick="copyToClipboard('encryptResult')">Copy Encrypted Text</button>
+            </div>
+            <div class="flex-item">
+                <h3>Decrypt</h3>
+                <textarea id="decryptText" placeholder="Enter text to decrypt..."></textarea>
+                <button onclick="decryptText()">Decrypt</button>
+                <div class="result" id="decryptResult"></div>
+                <button class="copy-button" onclick="copyToClipboard('decryptResult')">Copy Decrypted Text</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
